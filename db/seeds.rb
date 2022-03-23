@@ -5,3 +5,37 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Product.delete_all
+Product.create!(title: 'Porche',
+  description:
+    %{<p>
+      <em>"Lorem ipsum dolor sit amet</em>, consectetur adipiscing elit, sed do eiusmod
+         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.          
+      </p>},
+  image_url: 'car1.jpg',    
+  price: 150000.00)
+# . . .
+Product.create!(title: 'Lambo',
+  description:
+    %{<p>
+    <em>"Lorem ipsum dolor sit amet</em>, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.
+      </p>},
+  image_url: 'car2.jpg',
+  price: 200000.00)
+# . . .
+
+Product.create!(title: 'Merc',
+  description:
+    %{<p>
+    <em>"Lorem ipsum dolor sit amet</em>, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.
+      </p>},
+  image_url: 'car3.jpg',
+  price: 180000.00)
