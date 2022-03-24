@@ -9,4 +9,19 @@ class Product < ApplicationRecord
     with:    %r{\.(gif|jpg|png)\Z}i,
     message: 'must be a URL for GIF, JPG or PNG image.'
   }
+
+  has_many :line_items
+
+  before_destroy :not_line_item
+
+  private 
+
+  #hook method, called at a given time during an objects life
+  def not_line_item
+    unless line_items.empty?
+      errors.add(:base, 'Line Items present')
+      throw :abort
+    end
+  end
+
 end
