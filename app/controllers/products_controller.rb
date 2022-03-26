@@ -40,6 +40,10 @@ class ProductsController < ApplicationController
       if @product.update(product_params)
         format.html { redirect_to product_url(@product), notice: "Vehicle specs was successfully updated." }
         format.json { render :show, status: :ok, location: @product }
+
+        @products = Product.all
+        ActionCable.server.broadcast 'products',
+          html: render_to_string('store/index', layout: false)
       else
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @product.errors, status: :unprocessable_entity }
@@ -54,6 +58,16 @@ class ProductsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to products_url, notice: "Vehicle was successfully removed from your store." }
       format.json { head :no_content }
+    end
+  end
+
+  def who_bought
+    @product = Product.find(params[:id])
+    @latest_order = @product.orders.order(:updated_at).last
+    if stale?(@latest_order)
+      respond_to do |format|
+        format.atom
+      end
     end
   end
 

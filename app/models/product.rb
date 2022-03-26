@@ -11,6 +11,7 @@ class Product < ApplicationRecord
   }
 
   has_many :line_items
+  has_many :orders, through: :line_items
 
   before_destroy :not_line_item
 
