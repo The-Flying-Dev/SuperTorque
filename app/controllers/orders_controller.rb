@@ -78,4 +78,16 @@ class OrdersController < ApplicationController
         redirect_to store_index_url, notice: 'Hey! Add some cars, your Garage is empty'
       end
     end
+
+    def pay_type_params
+      if order_params[:pay_type] == "Credit Card"
+        params.require(:order).permit(:credit_card_number, :expiration_date)
+      elsif order_params[:pay_type] == "Crypto"
+        params.require(:order).permit(:routing_number, :account_number)
+      elsif order_params[:pay_type] == "Purchase Order"
+        params.require(:order).permit(:po_number)
+      else
+        {}
+      end
+    end
 end
