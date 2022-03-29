@@ -1,9 +1,9 @@
-class AdminsController < ApplicationController
+class AdminController < ApplicationController
   before_action :set_admin, only: %i[ show edit update destroy ]
 
   # GET /admins or /admins.json
   def index
-    #@admins = Admin.all
+    @admins = Admin.all
     @total_orders = Order.count 
   end
 
@@ -53,7 +53,7 @@ class AdminsController < ApplicationController
     @admin.destroy
 
     respond_to do |format|
-      format.html { redirect_to admins_url, notice: "Admin was successfully destroyed." }
+      format.html { redirect_to admin_url, notice: "Admin was successfully destroyed." }
       format.json { head :no_content }
     end
   end

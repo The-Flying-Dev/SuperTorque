@@ -1,3 +1,71 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.hero {
+  height: 100vh;
+
+  .hero-image {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.strip {
+  height: 40px;
+  background-color: rgb(129, 102, 56);
+
+  p {
+    transform: translate(0, 30%);
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+  }
+}
+
+.info {
+  
+  border: 2px solid black;
+  .card {
+    margin-top: 15%;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  
+
+  .card-body {
+    height: 200px;
+    width: 300px;
+    border: 3px solid rgb(121, 100, 33);
+    border-radius: 5px;
+
+    h5 {
+      margin-top: 2rem;
+      font-family: 'Fredoka', sans-serif, 'Roboto', sans-serif;
+      font-weight: 600;
+    }
+
+    a {    
+      
+      text-decoration: underline;
+      font-size: 30px;
+      color: rgb(54, 54, 54);
+      font-family: 'Fredoka', sans-serif, 'Roboto', sans-serif;
+      font-weight: 600;
+      color: rgb(145, 94, 8);
+      
+    }
+  }
+  }
+}
+
+.pledge {
+  height: 80vh;
+  border: 2px solid red;
+}
+

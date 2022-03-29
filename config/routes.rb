@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  
   get 'admin' => 'admin#index'
 
   controller :sessions do
@@ -9,7 +10,7 @@ Rails.application.routes.draw do
   end
 
   
-  resources :admins
+  #resources :admins
   get 'sessions/new'
   get 'sessions/create'
   get 'sessions/destroy'
@@ -17,6 +18,7 @@ Rails.application.routes.draw do
   resources :orders
   resources :line_items
   resources :carts
+  resources :contacts, only: [:new, :create]
   get 'store/index'
 
   resources :products do 
@@ -24,7 +26,7 @@ Rails.application.routes.draw do
   end
 
   get 'home/about'
-  get 'home/contact'  
+  
   root to: 'home#index'
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
