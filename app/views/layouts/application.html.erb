@@ -20,16 +20,17 @@
     <main class="<%= controller.controller_name %>">
       <%= render './shared/navbar' %>
 
-      <!--<div class="containerdiv">
+      <div class="containerdiv">
         <br>
-        <% flash.each do |key, message| %>
-          <p class="alert alert-<%= key %>"><%= message %></p>
-        <% end %>-->
+        <% if notice %>
+          <p class="alert alert-success"><%= notice %></p>
+        <% end %>
       </div>
       
       <%= yield %>
+      
     </main>
-
+    <%= render './shared/footer' %>
 
   </body>
 </html>
