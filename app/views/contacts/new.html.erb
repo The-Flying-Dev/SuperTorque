@@ -1,15 +1,32 @@
 <div class="container">
-  <h1>Contact Form</h1>
+  <h1>Lets Talk</h1>
+  <br />
+  <br />
+
+  <h3>Common reasons people reach out:</h3>
+  <br />
+
+  <ul>
+
+    <li><span>Press Releases:</span> Press releases can be send to our marketing team by filling out the form 
+      below. Simply include the URL where the press release can be found.</li>
+    <li><span>Enquire About A Car:</span> We know it is impossible to stay up to date on every new concept.</li>
+    <li><span>Advertising Enquiries:</span> If you are looking to reach our network, we recommend that you 
+      complete the form with all your relevant information.</li>
+    <li><span>Something Else?</span> No worries. Fill out the form below and we’ll get back to you soon.</li>   
+    
+  </ul>
+
   <%= form_for @contact do |f| %>
     <div class="col-md-6">
       <%= f.label :name %></br>
-      <%= f.text_field  :name, required: true, class: "contact-form-text-area" %></br>
+      <%= f.text_field :name, required: true, class: "contact-form-text-area" %></br>
 
       <%= f.label :email %></br>
       <%= f.text_field :email, required: true, class: "contact-form-text-area" %></br>
 
       <%= f.label :message %></br>
-      <%= f.text_area :message, rows: 8, cols: 40, required: true, class: "contact-form-text-area", 
+      <%= f.text_area :message, rows: 8, cols: 50, required: true, class: "contact-form-text-area", 
             placeholder: "Send me a message"%></br>
 
      
@@ -17,4 +34,9 @@
       <%= f.submit 'Send Message', class: 'btn btn-primary' %>
     </div>
   <% end %>
+
+  
+ 
 </div>
+
+<%= render './shared/footer' %>
