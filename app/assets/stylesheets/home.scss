@@ -4,13 +4,52 @@
 
 
 .hero {
-  height: 100vh;
+  height: 70vh;
+  width: 100vw;  
+  
+} 
 
-  .hero-image {
-    height: 100%;
-    width: 100%;
+  @mixin slide($duration) {
+    $name: inline-#{unique-id()};
+  
+    @keyframes #{$name} {
+      @content;
+    }
+  
+    animation-name: $name;
+    animation-duration: $duration;
+    animation-iteration-count: infinite;
   }
-}
+  
+  .hero {
+    @include slide(10s) {
+      0% {
+        background-image: image-url('about1.jpg');
+        background-size: cover
+      }
+  
+      25% {
+        background-image: image-url('about2.jpg');
+        background-size: cover;
+      }
+
+      50% {
+        background-image: image-url('about3.jpg');
+        background-size: cover;
+      }
+      75% {
+        background-image: image-url('about4.jpg');
+        background-size: cover;
+      }
+      100% {
+        background-image: image-url('about5.jpg');
+        background-size: cover;
+      }
+
+      
+    }
+  }
+
 
 .strip {
   height: 40px;
@@ -69,3 +108,38 @@
   border: 2px solid red;
 }
 
+
+.aboutpage {
+  overflow: hidden;
+  width: 100vw;  
+  white-space: pre-line;
+  
+
+  #aboutpageimg {
+    height: 100vh;
+    width: 100%;
+
+    .about-image {
+      height: 100%;
+      width: 100%;
+    }
+  }
+    
+  .about-company {
+    width: 90vw;   
+    
+         
+    h3 {
+      margin-left: 20vw; 
+      font-family: 'Fredoka', sans-serif, 'Roboto', sans-serif; 
+      font-weight: 700;
+    }  
+
+    .paragraph {
+       width: 70%;
+       margin-left: 20vw; 
+       font-family: 'Fredoka', sans-serif, 'Roboto', sans-serif;       
+    }
+  }
+  
+}
