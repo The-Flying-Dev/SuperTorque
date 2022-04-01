@@ -1,9 +1,15 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<div class="show_each_user">
+  <p>
+    <strong>Name:</strong>
+    <%= @user.name %>
+  </p>
+</div>
+
+
+
+<div class="show-links">
+  <%= link_to 'Edit', edit_user_path(@user) %> |
+  <%= link_to 'Back', users_path %>
+</div>
