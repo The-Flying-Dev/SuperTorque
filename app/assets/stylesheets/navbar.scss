@@ -10,6 +10,12 @@
     padding-right: 5px;
     color: rgb(121, 100, 33);
   }
+
+  a:hover {
+    text-decoration: none;
+    color: black;
+  }
+
 }
 
 
@@ -40,6 +46,23 @@
     font-weight: 600;
     
   }
+
+  a:hover {
+    text-decoration: none;
+    color: rgb(121, 100, 33);
+  }
+
+  .alt_tag {
+    color: rgb(121, 100, 33);
+  }
+
+  .alt_tag:hover {
+    text-decoration: none;
+    color: black;
+  }
+
+  
+  
 
   
 }
