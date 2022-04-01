@@ -101,16 +101,41 @@
   
 
   .column1 {
-    flex: 40%;
+    flex: 40%;    
     
-
-    .row-image1 {
-      height: 60%;
-      width: 60%;
-      border-radius: 60%;
-      margin-top: 25%;
+    h2 {
+      font-family: 'Fredoka', sans-serif, 'Roboto', sans-serif;
+      color: rgb(0, 23, 128);      
+      -webkit-transition: color 2s;
+      transition: color 2s;
+      margin-bottom: 5%;
+      font-weight: 600;
       
     }
+
+    h2:hover {
+      color: rgb(0, 122, 20);
+    }
+
+    .p-text {
+      margin-top: 8%;
+      margin-left: 10%;
+      border-radius: 10%;
+      height: 80%;
+      width: 95%;
+      background-image: linear-gradient(rgb(189, 189, 189), rgb(216, 216, 216));
+
+      p {
+        padding: 5%;
+        width: 90%;
+        height: 100%;
+        line-height: 5vh;
+        font-family: 'Fredoka', sans-serif, 'Roboto', sans-serif;
+        font-weight: 500;
+      }
+    }
+
+    
   }
 
   .column2 {
@@ -153,7 +178,7 @@
 
   li {
     display: inline;       
-    padding: 7vw;
+    padding: 6vw;
     
 
     .review-image {
