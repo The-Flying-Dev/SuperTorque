@@ -1,3 +1,103 @@
 // Place all the styles related to the Orders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.order_form {
+  padding: 0 1em;
+  margin-bottom: 20vh;
+  h1 {
+    font-size: 1.99em;
+    line-height: 1.41em;
+    margin-bottom: 0.5em;
+    padding: 0;
+  }
+  .field, .actions {
+    margin-bottom: 0.5em;
+    padding: 0;
+  }
+  .actions {    
+    padding: 1em 0;
+    margin-left: 20vw;
+    margin-bottom: 20vh;
+
+    input[type="submit"] {
+      background-color: rgb(22, 179, 56);
+      border-radius: 0.354em;
+      border: solid rgb(135, 214, 32);
+      color: black;
+      font-size: 1.41em;
+      font-weight: bold;
+      padding: 0.354em 1em;
+      width: 50vw;
+      
+    }
+    
+    
+  }
+  input, textarea, select, option {
+    border: solid thin #888;
+    box-sizing: border-box;
+    font-size: 1em;
+    padding: 0.5em;
+    width: 100%;
+  }
+}  
+.field {
+  width: 50vw;  
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin-left: 20vw;
+}
+
+label {
+  font-weight: 900;
+}
+
+#order_heading {
+  margin-top: 10vh;
+  margin-left: 20vw;
+  margin-bottom: 10vh;
+  font-weight: 800;
+  
+}
+
+#order_name {
+  border-radius: 10px;
+  margin-bottom: 3vh;
+}
+
+#order_address {
+  border-radius: 10px;
+  margin-bottom: 3vh;
+  resize: none;
+}
+
+#order_email {
+  border-radius: 10px;
+  margin-bottom: 3vh;
+}
+
+#pay_type {
+  margin-bottom: 15vh;
+}
+
+label {
+  padding: 0.5em 0;
+}
+
+.back_tag {
+  font-size: larger;
+  font-weight: 900;
+  text-decoration: none;
+  margin-left: 5vw;
+  color: rgb(121, 100, 33);
+  
+}
+
+.back_tag:hover {
+  text-decoration: none;
+  color: rgb(121, 100, 33);
+}
+
+
