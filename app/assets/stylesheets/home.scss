@@ -1,54 +1,19 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+.homepage {
+  width: 100vw;
+}
 
 .hero {
-  height: 70vh;
-  width: 100vw;  
-  
-} 
+  width: 100vw;
+  height: 100vh;
 
-  @mixin slide($duration) {
-    $name: inline-#{unique-id()};
-  
-    @keyframes #{$name} {
-      @content;
-    }
-  
-    animation-name: $name;
-    animation-duration: $duration;
-    animation-iteration-count: infinite;
+  .hero-image {
+    height: 100%;
+    width: 100%;
   }
-  
-  .hero {
-    @include slide(10s) {
-      0% {
-        background-image: image-url('about1.jpg');
-        background-size: cover
-      }
-  
-      25% {
-        background-image: image-url('about2.jpg');
-        background-size: cover;
-      }
-
-      50% {
-        background-image: image-url('about3.jpg');
-        background-size: cover;
-      }
-      75% {
-        background-image: image-url('about4.jpg');
-        background-size: cover;
-      }
-      100% {
-        background-image: image-url('about5.jpg');
-        background-size: cover;
-      }
-
-      
-    }
-  }
+}
 
 
 .strip {
@@ -60,14 +25,32 @@
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
+
+    
   }
 }
 
+.statement {
+  overflow: hidden;
+  height: 45vh;
+  width: 100vw;
+
+  p {
+    width: 80%;
+    margin-top: 15vh;
+    margin-left: 10vw; 
+    font-family: 'Fredoka', sans-serif, 'Roboto', sans-serif;   
+    vertical-align:middle;   
+    font-size: large ;
+ }
+}
+
 .info {
-  
-  border: 2px solid black;
+  height: 40vh;
+  margin-bottom: 15vh;
   .card {
-    margin-top: 15%;
+    margin-top: 10vh;
+    padding-bottom: 10vh;
     border: none;
     align-items: center;
     justify-content: center;
@@ -79,9 +62,13 @@
 
   .card-body {
     height: 200px;
-    width: 300px;
+    width: 500px;
     border: 3px solid rgb(121, 100, 33);
     border-radius: 5px;
+    span {
+      font-size: 30px;
+	    vertical-align:middle;
+    }
 
     h5 {
       margin-top: 2rem;
@@ -103,25 +90,96 @@
   }
 }
 
-.pledge {
-  height: 80vh;
-  border: 2px solid red;
+.row {
+  display: flex;    
+  justify-content: center;  
+  text-align: center;
+  width: 100vw;
+  height: 70vh;
+  margin-bottom: 25vh;
+  
+  
+
+  .column1 {
+    flex: 40%;
+    
+
+    .row-image1 {
+      height: 60%;
+      width: 60%;
+      border-radius: 60%;
+      margin-top: 25%;
+      
+    }
+  }
+
+  .column2 {
+    flex: 60%;
+    
+
+    h2 {
+      font-family: 'Fredoka', sans-serif, 'Roboto', sans-serif;
+      color: rgb(0, 122, 20);
+      -webkit-transition: color 2s;
+      transition: color 2s;
+      margin-bottom: 5%;
+      font-weight: 600;
+      
+    }
+
+    h2:hover {
+      color: rgb(0, 23, 128);
+    }
+   
+    .row-image2 {
+      height: 80%;
+      width: 80%;      
+      border-radius: 5%;
+    }
+  }
+}
+
+.review {
+  height: 30vh;
+  margin-bottom: 20vh;
+  background-color: rgb(239, 244, 248);
+
+  h2 {
+    font-family:  'Source Code Pro', monospace;
+    font-weight: 600;
+    padding-top: 4vh;
+    padding-bottom: 2vh;
+  }
+
+  li {
+    display: inline;       
+    padding: 7vw;
+    
+
+    .review-image {
+      height: 10vh;
+      width: 10vw;
+    }
+  }
 }
 
 
 .aboutpage {
   overflow: hidden;
   width: 100vw;  
-  white-space: pre-line;
+  
+  
   
 
   #aboutpageimg {
     height: 100vh;
     width: 100%;
+    
 
     .about-image {
       height: 100%;
       width: 100%;
+      
     }
   }
     
@@ -133,12 +191,15 @@
       margin-left: 20vw; 
       font-family: 'Fredoka', sans-serif, 'Roboto', sans-serif; 
       font-weight: 700;
+      margin-top: 5vh;
+      margin-bottom: 5vh;
     }  
 
     .paragraph {
        width: 70%;
        margin-left: 20vw; 
-       font-family: 'Fredoka', sans-serif, 'Roboto', sans-serif;       
+       font-family: 'Fredoka', sans-serif, 'Roboto', sans-serif;   
+       margin-bottom: 5vh;    
     }
   }
   

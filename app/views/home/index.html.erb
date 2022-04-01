@@ -1,26 +1,57 @@
 <div class="homepage">
 
-  <div class="hero"></div>
+  <div class="hero">       
+      <%= image_tag("aboutpage.jpg", :class => "hero-image") %>  
+  </div>
 
   
   <div class="strip">
     <p>Concept luxury vehicles for the Distinguished</p>
   </div>
   
+  <div class="statement">
+    <p>SuperTorque has proudly been in business since 2020 providing the highest level 
+      of service to our customers. We believe that Good Business begins with Top Quality Automobiles, 
+      High Attention to detail & continues with service after the sale. Our customers are very discerning 
+      car people that are searching for the very best in the automobile and the buying experience, 
+      We believe you will be comforted in knowing what our other customers have said in regards 
+      to their experience.Come to our exotic car dealership today!</p>
+  </div>
+
   <div class="info">
     <div class="card text-center">
       
       <div class="card-body">
-        <h5 class="card-title">Selection of Limited Edition </h5>        
+        <h5 class="card-title">Selection of <span>Rare Vehicles</span></h5>        
         <%= link_to 'Find Your Car', store_index_path %>
       </div>
      
     </div>
   </div>
 
-  
+
+  <div class="row">
+    <div class="column1">
+      <%= image_tag("rowimage1.jpg", :class => "row-image1") %>  
+    </div>
+
+    <div class="column2">
+      <h2>Land Rover Colossus</h2>
+      <%= image_tag("rowimage2.jpg", :class => "row-image2") %> 
+    </div>
+  </div>
+
   
     
-  <div class="pledge"></div>
+  <div class="review">  
+    <h2>As featured in</h2>  
+    <ul>
+      
+      <li><%= image_tag("review1.png", :class => "review-image") %></li>
+      <li><%= image_tag("review2.png", :class => "review-image") %></li>
+      <li><%= image_tag("review3.jpg", :class => "review-image") %></li>
+      <li><%= image_tag("review4.png", :class => "review-image") %></li>
+    </ul>
+  </div>
 </div>
 
