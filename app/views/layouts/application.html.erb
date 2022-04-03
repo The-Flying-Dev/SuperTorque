@@ -20,12 +20,15 @@
     <main class="<%= controller.controller_name %>">
       <%= render './shared/navbar' %>
       
-      <% if @cart %>
-        <div id="cart" class="d-flex">        
-            <%= render_if @cart && @cart.line_items.any?, @cart %>        
-        </div>
+    
+      
+      <div id="cart" class="cart-table">  
+        <% if @cart %>      
+          <%= render_if @cart && @cart.line_items.any?, @cart %>  
+        <% end %>	      
+      </div>
 
-      <% end %>
+      
 
      
       
