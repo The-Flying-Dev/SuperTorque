@@ -133,7 +133,7 @@
 
     strong {
       font-weight: 600;
-      padding-bottom: 1%;  
+      margin-bottom: 4vh;  
       text-decoration: underline; 
       text-decoration-thickness: 3px; 
       text-decoration-style: solid;  
@@ -156,4 +156,55 @@
     margin-bottom: 5vh;
   }
 
+}
+
+.product_listing {
+  display: flex; 
+  margin-bottom: 10vh;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;  
+  text-align: center;
+  
+
+  .product_column {
+    width: 30vw;
+    height: 30vh; 
+    margin-bottom: 8vh;
+    
+    h3 {
+      
+      font-family: 'Fredoka', sans-serif, 'Roboto', sans-serif;   
+      font-weight: 600;
+      
+    
+    }
+
+    .list_image {
+      height: 50%;      
+      border-radius: 5px;
+    }
+
+    p {
+      
+      
+      text-align: center;
+      font-family: 'Fredoka', sans-serif, 'Roboto', sans-serif;
+      font-weight: 500;
+    }
+
+    ul {
+      
+      li {
+        display: inline;
+
+        a {
+          padding: 0%;
+          text-decoration: none;
+          color: red;
+          font-weight: 600;
+        }
+      }
+    }
+  }
 }
