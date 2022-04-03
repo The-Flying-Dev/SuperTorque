@@ -31,7 +31,7 @@ class LineItemsController < ApplicationController
     respond_to do |format|
       if @line_item.save
         format.html { redirect_to store_index_url } #redirects to the cart
-        format.js { @current_item = @line_item }#to stop the redirect to if the request is for javascript
+        format.js #{ @current_item = @line_item }#to stop the redirect to if the request is for javascript
         format.json { render :show, status: :created, location: @line_item }
       else
         format.html { render :new, status: :unprocessable_entity }
