@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get 'sessions/destroy'
   resources :users
   resources :orders
+  resources :products
   resources :line_items
   resources :carts
   resources :contacts, only: [:new, :create]
