@@ -15,15 +15,21 @@
  */
 
  .notice, #notice {
+  width: 20vw;
+  height: 10vh;
   background: #ffb;
   border-radius: 0.5em;
   border: solid 0.177em #882;
   color: #882;
   font-weight: bold;
-  margin-bottom: 1em;
+  margin-top: 5vh;
+  margin-left: 10vw;
   padding: 1em 1.414em;
   text-align: center;
+  align-items: center;
 }
+
+
 
 #cart-table {
   width: 30vw;

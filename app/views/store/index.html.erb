@@ -1,27 +1,21 @@
 <h1>Cars on offer</h1>
 
-<% if notice %>
-  <aside id="notice"><%= notice %></aside>
-<% end %>
-
-
-<ul class="catalog">
+<div class="product_listing">
+  
   <% cache @products do %> <!-- Russian doll caching section to update if any product chages occur-->
     <% @products.each do |product| %>
       <% cache product do %>
-        <li>
-          <%= image_tag(product.image_url) %>
-          <h2><%= product.title %></h2>
-          <p>
-            <%= sanitize(product.description) %>
-          </p>
-          <div class="price">
-            <%= pounds(product.price) %>
-            <%= button_to "Add to Garage", line_items_path(product_id: product), remote: true %>
-          </div>
-        </li>
+
+        <div class="product_column">
+          <h3><%= product.title %></h3>
+          <%= image_tag(product.image_url, class: 'list_image') %>
+          <p><%= truncate(strip_tags(product.description), length: 50) %></p>
+          <p class="car_price"><%= pounds(product.price) %></p>
+          <p><%= button_to "Add to Garage", line_items_path(product_id: product), remote: true %></p>
+        </div>
+
       <% end %>
     <% end %>
   <% end %>
-</ul>
 
+</div>

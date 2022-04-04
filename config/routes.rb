@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   resources :carts
   resources :contacts, only: [:new, :create]
   get 'store/index'
+  
 
   resources :products do 
     get :who_bought, on: :member
