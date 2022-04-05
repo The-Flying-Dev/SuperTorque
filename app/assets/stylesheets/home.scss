@@ -37,7 +37,7 @@
 
   p {
     width: 80%;
-    margin-top: 15vh;
+    margin-top: 10vh;
     margin-left: 10vw; 
     font-family: 'Fredoka', sans-serif, 'Roboto', sans-serif;   
     vertical-align:middle;   
@@ -96,7 +96,7 @@
   text-align: center;
   width: 100vw;
   height: 70vh;
-  margin-bottom: 25vh;
+  margin-bottom: 20vh;
   
   
 
@@ -118,6 +118,7 @@
     }
 
     .p-text {
+      padding: 5%;
       margin-top: 8%;
       margin-left: 10%;
       border-radius: 10%;
@@ -126,9 +127,9 @@
       background-image: linear-gradient(rgb(189, 189, 189), rgb(216, 216, 216));
 
       p {
-        padding: 5%;
-        width: 90%;
-        height: 100%;
+        
+        width: 30vw;
+        height: 36vh;
         line-height: 5vh;
         font-family: 'Fredoka', sans-serif, 'Roboto', sans-serif;
         font-weight: 500;
