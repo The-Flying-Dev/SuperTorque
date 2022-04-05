@@ -1,19 +1,29 @@
   
-  <h2>Your Garage</h2>
+  
   <table>
+    <tr id="head">
+      <th colspan="4">
+        <h4>Your Garage</h4>
+      </th>
+      
+    </tr>
+
     <%= render(cart.line_items) %> <!--calling line item partial-->
     <tfoot>
       <tr>
-        <th colspan="2">Total:</th>
+        <th colspan="3">Total:</th>
         <td class="price"><%= pounds(cart.total_cost) %></td>
+      </tr>
+      <tr>        
+        <td colspan="3"><%= button_to 'Empty cart', cart, method: :delete, data: { confirm: 'Are you sure?' }, class: "checkout" %></td>             
+        <td colspan="3"><%= button_to 'Checkout', new_order_path, method: :get, class: "checkout" %></td>
       </tr>
     </tfoot>
   </table>
  
   
-  <%= button_to 'Empty cart', cart, method: :delete, data: { confirm: 'Are you sure?' } %>
-  <%= button_to 'Checkout', new_order_path, method: :get, class: "checkout" %>
-  <%= link_to 'Edit', edit_cart_path(cart) %> | <%= link_to 'Back', carts_path %>
+  
+ 
 
 </article>
 

@@ -1,5 +1,5 @@
 class CartsController < ApplicationController
-  skip_before_action :authorize, only: [:create, :update, :destroy]
+  skip_before_action :authorize, only: [:create, :edit, :update, :destroy]
   before_action :set_cart, only: %i[ show edit update destroy ]
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart 
 
@@ -40,7 +40,7 @@ class CartsController < ApplicationController
   def update
     respond_to do |format|
       if @cart.update(cart_params)
-        format.html { redirect_to cart_url(@cart), notice: "Cart was successfully updated." }
+        format.html { redirect_to @cart, notice: "Cart was successfully updated." }
         format.json { render :show, status: :ok, location: @cart }
       else
         format.html { render :edit, status: :unprocessable_entity }

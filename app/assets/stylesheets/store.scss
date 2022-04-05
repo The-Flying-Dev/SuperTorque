@@ -15,6 +15,30 @@
      
   } 
 
+  table {
+
+    .price {
+      font-weight: bold;
+      text-align: right;
+    }
+    
+    .remove  {
+      input[type="submit"] {
+        background-color: rgb(185, 30, 30);
+        border-radius: 0.354em;
+        border: solid rgb(255, 0, 0);
+        color: white;
+        font-size: 1em;
+        
+      }
+    }
+    .checkout {
+      margin-top: 2vh;
+    }
+
+
+  }
+
   
   input[type="submit"] {
     background-color: rgb(30, 103, 185);
@@ -25,6 +49,20 @@
     margin-bottom: 5vh;
   }
   input[type="submit"]:hover {
+    background-color: rgb(122, 121, 28);
+  }
+
+  .edit {
+    background-color: rgb(30, 103, 185);
+    border-radius: 0.354em;
+    border: solid thin rgb(23, 106, 121);
+    color: white;
+    font-size: 1em;
+    margin-bottom: 5vh;
+    text-decoration: none;
+  }
+
+  .edit:hover {
     background-color: rgb(122, 121, 28);
   }
   

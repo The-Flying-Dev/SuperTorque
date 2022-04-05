@@ -15,12 +15,12 @@
  */
 .containerdiv {
 
-  width: 20vw;
-  height: 12vh;
+  width: 30vw;
+  height: 15vh;
   margin-top: 5vh;
 
     .notice, #notice {
-      width: 15vw;
+      width: 20vw;
       height: 10vh;
       background: #ffb;
       border-radius: 0.5em;
@@ -34,9 +34,10 @@
 }
 
 
-#cart-table {
-  width: 30vw;
-  height: 30vh;
+#cart {
+  width: 40vw;
+  margin-left: 7vw;
+  
 }
   
   #error_explanation {
@@ -103,7 +104,10 @@
 
   .actions {    
     padding: 1em 0;    
-    margin-bottom: 20vh;
+    margin: 15vh 0;
+    display: flex;
+    justify-content: center;
+
 
     input[type="submit"] {           
       background-color: rgb(185, 158, 0);

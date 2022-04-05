@@ -1,7 +1,9 @@
 
-<tr>
-  <td><%= line_item.product.title %></td>
-  <td class="quantity">&times;<%= line_item.quantity %></td>
-  <td class="price"><%= pounds(line_item.total_cost) %></td> 
+<tr>  
+  <td><%= line_item.product.title %>&nbsp;</td>
+  <td class="quantity">&times;  &nbsp;<%= line_item.quantity %></td>
+  <td> &nbsp; total for this model</td>
+  <td class="price"> &nbsp;<%= pounds(line_item.total_cost) %> &nbsp; &nbsp;</td> 
+  <td class="remove"> &nbsp;<%= button_to "Remove", line_item, method: :delete, data: { confirm: 'Are you sure?' }, class: "remove"  %></td>
 </tr>
 
