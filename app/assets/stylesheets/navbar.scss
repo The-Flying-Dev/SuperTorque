@@ -1,82 +1,68 @@
 .navbar {
-
-
-
   width: 100vw;
   overflow: hidden;
-  margin-top: 0; 
-
+  margin-top: 0 auto;   
+  display: flex;
+  flex-direction: row;
   
 
+  .navbar-links {
 
-  .container-fluid {
-    line-height: 10vh;
-
-    a {
-      font-size: 7vh;
-      font-weight: 700;
-      text-decoration: none;
-      margin-right: 1vw;
-      padding-right: 5px;
-      color: rgb(121, 100, 33);
-      
-    }
-
-    a:hover {
-      text-decoration: none;
-      color: black;
-    }
-
-  }
-
-
-  #navbarSupportedContent {
-    line-height: 2rem;
-  }
-
-
-  .navbar-nav {
+    line-height: 12vh;
 
     ul {
-      line-height: 2em;
+      line-height: 2em;  
+      margin-top: 2vh; 
+     
+
+      li {           
+        display: inline; 
+        padding: 0 1vw;  
+        font-size: 3vh;    
       
-    }
-
-    li {
-    margin-left: 1vw;
-    margin-right: 1vw; 
+        .logo {
+          
+          font-size: 7vh;
+          font-weight: 700;
+          text-decoration: none;
+          margin-right: 1vw;
+          padding-right: 5px;
+          color: rgb(121, 100, 33);
+          
+        }
     
-    }
-
+        .logo:hover {
+          text-decoration: none;
+          color: black;
+        }
     
-    a {    
-      text-decoration: none;
-      font-size: 3vh;
-      color: rgb(54, 54, 54);
-      font-family: 'Fredoka', sans-serif, 'Roboto', sans-serif;
-      font-weight: 600;
       
-    }
 
-    a:hover {
-      text-decoration: none;
-      color: rgb(121, 100, 33);
-    }
+      
+        a {    
+          text-decoration: none;          
+          color: rgb(54, 54, 54);
+          font-family: 'Fredoka', sans-serif, 'Roboto', sans-serif;
+          font-weight: 600;
+          
+        }
 
-    .alt_tag {
-      color: rgb(121, 100, 33);
-    }
+        a:hover {
+          text-decoration: none;
+          color: rgb(121, 100, 33);
+        }
 
-    .alt_tag:hover {
-      text-decoration: none;
-      color: black;
-    }
+        .alt_tag {
+          color: rgb(121, 100, 33);
+        }
 
-    #cart {
-      width: 80%;
-      height: 80%;
+        .alt_tag:hover {
+          text-decoration: none;
+          color: black;
+        }
+
+      }
     }
-    
   }
 
 }
