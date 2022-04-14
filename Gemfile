@@ -23,6 +23,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'webpacker', '~> 5.4', '>= 5.4.3'
 gem 'mail_form'
+gem 'stripe', '~> 5.48'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
