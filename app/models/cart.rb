@@ -1,6 +1,6 @@
 class Cart < ApplicationRecord
   has_many :line_items, dependent: :destroy
-
+  
 
   #if product exists then increase quantity else builds new line item
   def add_product(product)

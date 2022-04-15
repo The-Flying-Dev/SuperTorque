@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Product.delete_all
-Product.create!(title: 'Porche',
+Product.where(title: 'Porche',
   description:
     %{<p>
       <em>"Lorem ipsum dolor sit amet</em>, consectetur adipiscing elit, sed do eiusmod
@@ -15,9 +15,9 @@ Product.create!(title: 'Porche',
          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.          
       </p>},
   image_url: 'car1.jpg',    
-  price: 150000.00)
+  price: 150000.00).first_or_create
 # . . .
-Product.create!(title: 'Lambo',
+Product.where(title: 'Lambo',
   description:
     %{<p>
     <em>"Lorem ipsum dolor sit amet</em>, consectetur adipiscing elit, sed do eiusmod
@@ -26,10 +26,10 @@ Product.create!(title: 'Lambo',
       Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.
       </p>},
   image_url: 'car2.jpg',
-  price: 200000.00)
+  price: 200000.00).first_or_create
 # . . .
 
-Product.create!(title: 'Merc',
+Product.where(title: 'Merc',
   description:
     %{<p>
     <em>"Lorem ipsum dolor sit amet</em>, consectetur adipiscing elit, sed do eiusmod
@@ -38,9 +38,9 @@ Product.create!(title: 'Merc',
       Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.
       </p>},
   image_url: 'car3.jpg',
-  price: 180000.00)
+  price: 180000.00).first_or_create
 
-  Product.create!(title: 'car4',
+  Product.where(title: 'car4',
   description:
     %{<p>
     <em>"Lorem ipsum dolor sit amet</em>, consectetur adipiscing elit, sed do eiusmod
@@ -49,9 +49,9 @@ Product.create!(title: 'Merc',
       Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.
       </p>},
   image_url: 'about1.jpg',
-  price: 180000.00)
+  price: 180000.00).first_or_create
 
-  Product.create!(title: 'car5',
+  Product.where(title: 'car5',
   description:
     %{<p>
     <em>"Lorem ipsum dolor sit amet</em>, consectetur adipiscing elit, sed do eiusmod
@@ -60,9 +60,9 @@ Product.create!(title: 'Merc',
       Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.
       </p>},
   image_url: 'about2.jpg',
-  price: 180000.00)
+  price: 180000.00).first_or_create
 
-  Product.create!(title: 'car6',
+  Product.where(title: 'car6',
   description:
     %{<p>
     <em>"Lorem ipsum dolor sit amet</em>, consectetur adipiscing elit, sed do eiusmod
@@ -71,10 +71,10 @@ Product.create!(title: 'Merc',
       Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.
       </p>},
   image_url: 'about3.jpg',
-  price: 180000.00)
+  price: 180000.00).first_or_create
 
 
-  Product.create!(title: 'car7',
+  Product.where(title: 'car7',
   description:
     %{<p>
     <em>"Lorem ipsum dolor sit amet</em>, consectetur adipiscing elit, sed do eiusmod
@@ -83,6 +83,6 @@ Product.create!(title: 'Merc',
       Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.
       </p>},
   image_url: 'about4.jpg',
-  price: 180000.00)
+  price: 180000.00).first_or_create
 
  
