@@ -20,7 +20,8 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 
 
-gem 'bcrypt', '~> 3.1.7'
+#gem 'bcrypt', '~> 3.1.7'
+gem 'devise'
 gem 'webpacker', '~> 5.4', '>= 5.4.3'
 gem 'mail_form'
 gem 'braintree'
