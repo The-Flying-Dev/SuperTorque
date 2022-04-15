@@ -1,12 +1,16 @@
 class ApplicationController < ActionController::Base
-  before_action :authorize 
+  
 
+  helper_method :ensure_cart_not_empty
 
   protected 
 
-  def authorize 
-    unless User.find_by(id: session[:user_id])
-      redirect_to login_url, notice: "Please log in"
+  
+
+  private
+  def ensure_cart_not_empty
+    if @cart.line_items.empty?
+      redirect_to store_index_url, notice: 'Hey! Add some cars, your Garage is empty'
     end
   end
 

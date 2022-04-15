@@ -16,7 +16,7 @@
       </tr>
       <tr>        
         <td colspan="3"><%= button_to 'Empty cart', cart, method: :delete, data: { confirm: 'Are you sure?' }, class: "checkout" %></td>             
-        <td colspan="3"><%= button_to 'Checkout', new_order_path, method: :get, class: "checkout" %></td>
+        <td colspan="3"><%= link_to 'Checkout', new_transaction_path, class: "button" %></td>
       </tr>
     </tfoot>
   </table>
