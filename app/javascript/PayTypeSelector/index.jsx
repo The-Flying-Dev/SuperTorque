@@ -2,7 +2,6 @@ import React from 'react'
 
 import NoPayType from './NoPayType';
 import CreditCardPayType from './CreditCardPayType';
-import CryptoPayType from './CryptoPayType';
 import PurchaseOrderPayType from './PurchaseOrderPayType';
 
 class PayTypeSelector extends React.Component {
@@ -19,8 +18,6 @@ class PayTypeSelector extends React.Component {
     let PayTypeCustomComponent = NoPayType;
     if (this.state.selectedPayType == "Credit card") {
       PayTypeCustomComponent = CreditCardPayType;
-    } else if (this.state.selectedPayType == "Crypto") {
-      PayTypeCustomComponent = CryptoPayType;
     } else if (this.state.selectedPayType == "Purchase order") {
       PayTypeCustomComponent = PurchaseOrderPayType;
     }
@@ -33,10 +30,7 @@ class PayTypeSelector extends React.Component {
           <select id="pay_type" onChange={this.onPayTypeSelected}  name="order[pay_type]">
             <option value="">
               Select payment method
-            </option>
-            <option value="Crypto">
-              Crypto
-            </option>
+            </option>            
             <option value="Credit card">
               Credit card 
             </option>
@@ -45,9 +39,12 @@ class PayTypeSelector extends React.Component {
             </option>
           </select>
         </div>
-        <PayTypeCustomComponent />
+        <PayTypeCustomComponent />        
       </div>
     );
   }
 }
+
+
+
 export default PayTypeSelector

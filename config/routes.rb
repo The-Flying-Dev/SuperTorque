@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   
   devise_for :users
   
-  #get 'transactions/new'
- 
+  
+  
   resources :orders
   resources :products
   resources :line_items

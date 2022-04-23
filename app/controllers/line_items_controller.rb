@@ -1,5 +1,5 @@
 class LineItemsController < ApplicationController
- 
+  #before_action :authenticate_user!
   include CurrentCart
   before_action :set_cart, only: [:create ] #find or create cart for current session
   before_action :set_line_item, only: %i[ show edit update destroy ]

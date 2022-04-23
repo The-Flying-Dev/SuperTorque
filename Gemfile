@@ -24,7 +24,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'webpacker', '~> 5.4', '>= 5.4.3'
 gem 'mail_form'
-gem 'braintree'
+#gem 'braintree'
+gem 'stripe', '~> 5.50'
 
 
 # Use ActiveStorage variant
