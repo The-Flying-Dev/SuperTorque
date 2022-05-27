@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&family=Roboto&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@800&family=Roboto&display=swap" rel="stylesheet"> 
     
-
+    <script src="https://js.stripe.com/v2/"></script> 
 
     
   </head>
@@ -23,9 +23,7 @@
     
     <main class="<%= controller.controller_name %>">
       <%= render './shared/navbar' %>
-
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+      
       
       <% if notice %>
         <div class="containerdiv">        

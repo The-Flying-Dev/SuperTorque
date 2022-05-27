@@ -1,8 +1,7 @@
 .footer {
   width: 100vw;
   display: flex;
-  flex-direction: row;
-  justify-content:space-between;
+  flex-direction: row;  
   font-family: 'Fredoka', sans-serif, 'Roboto', sans-serif;
   margin-top: 5vh;
 
@@ -40,7 +39,7 @@
   } 
 
   .address {
-    margin-right: 7vw;
+    padding-left: 25vw;
     
     li {
       list-style: none;

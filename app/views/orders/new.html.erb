@@ -1,12 +1,36 @@
+
+
 <section class="order_form">
   <h1>New Order</h1>
 
-  <%= render 'form', order: @order %>
+  <%# render 'form', order: @order %>
+
+  <%= form_tag charges_path do %>
+<article>
+  <% if flash[:error].present? %>
+  <div id="error_explanation">
+    <p><%= flash[:error] %></p>
+  </div>
+  <% end %>
+  <label class="amount">
+    <input type=”hidden” name=”stripeToken” />
+  <span>Amount: $<%= @cart.total_cost %></span>
+  </label>
+</article>
+
+<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+  data-description="A month's subscription"
+  data-amount="<%= @cart.total_cost %>"
+  data-locale="auto"></script>
+<% end %>
 
  
-  <%= javascript_pack_tag("pay_type") %>
+  
 </section>
 
 <div class="page_links">
   <%= link_to ' Go Back To The Store', store_index_path %>
 </div>
+
+
