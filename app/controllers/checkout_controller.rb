@@ -1,30 +1,26 @@
 class CheckoutController < ApplicationController
-  include CurrentCart
-  before_action :set_cart
+  #include CurrentCart
+  #before_action :set_cart
 
   def create
     product = Product.find(params[:id])
-    Stripe::Checkout::Session.create({
-    mode: 'payment',
-# Remove the payment_method_types parameter
-# to manage payment methods in the Dashboard
-    payment_method_types: ['card'],
-    line_items: [{
-      price_data: {
-      # The currency parameter determines which
-      # payment methods are used in the Checkout Session.
-        currency: 'gbp',
-          product_data: {
-            name: product.title,
-            description: product.description,
-          },
-          unit_amount: product.price,
-        },
-        quantity: product.quantity,
-      }],
-      success_url: root_url,
-      cancel_url: root_url,
-    })
+      @session = Stripe::Checkout::Session.create({        
+        payment_method_types: ['card'],
+        line_items: [{
+          name: product.title,
+          amount: product.price,
+          currency: "gbp",
+          quantity: 1
+        }],
+        
+        mode: 'payment',
+        success_url: root_url,
+        cancel_url: root_url,
+      })
+      respond_to do |format|
+        format.js 
+      end
+      
   end
 
 end
