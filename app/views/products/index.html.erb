@@ -11,6 +11,7 @@
           <%= image_tag(product.image_url, class: 'list_image') %>
           <p><%= truncate(strip_tags(product.description), length: 50) %></p>
           <p class="car_price"><%= number_to_currency(product.price/100) %></p>
+          <p><%= product.sales_count %></p>
           <ul>
             <li><%= link_to 'Show', product %></li>
             <li><%= link_to 'Edit', edit_product_path(product) %> </li>

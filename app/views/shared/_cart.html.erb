@@ -1,0 +1,5 @@
+<% if @cart %>
+  <div id="cart" class="d-flex">        
+    <%= render_if @cart && @cart.line_items.any?, @cart %>        
+  </div>
+<% end %>

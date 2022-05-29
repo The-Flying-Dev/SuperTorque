@@ -1,20 +1,21 @@
 Rails.application.routes.draw do
 
   
-  #get 'charges/new'
-  #get 'charges/create'
+  
   devise_for :users
   
   
-  #resources :charges, only: [:new, :create]
+  
   resources :orders
   resources :products
-  resources :line_items
-  resources :carts  
+  #resources :line_items
+  #resources :carts  
   resources :contacts, only: [:new, :create]
-  post "checkout/create", to: "checkout#create"
- 
-  #post 'checkout/create', to: 'checkout#create'
+  post 'checkout/create', to: 'checkout#create'
+  resources :webhooks, only: [:create]
+  get "success", to: "checkout#success"
+  get "cancel", to: "checkout#cancel"
+  
   
   get 'store/index'
   
