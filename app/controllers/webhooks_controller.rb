@@ -29,7 +29,7 @@ class WebhooksController < ApplicationController
       #session_with_expand.line_items.data.each do |line_item|
         product = Product.find_by(price: session.amount_total)
         
-      end
+      #end
     end
 
     render json: { message: 'success' }
