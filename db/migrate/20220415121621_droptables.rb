@@ -1,6 +1,0 @@
-class Droptables < ActiveRecord::Migration[5.2]
-  def change
-    drop_table :admins
-    drop_table :users
-  end
-end
