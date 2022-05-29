@@ -1,11 +1,7 @@
 Rails.application.routes.draw do
 
-  
-  
   devise_for :users
-  
-  
-  
+
   resources :orders
   resources :products
   #resources :line_items
@@ -14,11 +10,9 @@ Rails.application.routes.draw do
   post 'checkout/create', to: 'checkout#create'
   resources :webhooks, only: [:create]
   get "success", to: "checkout#success"
-  get "cancel", to: "checkout#cancel"
+  get "cancel", to: "checkout#cancel"  
   
-  
-  get 'store/index'
-  
+  get 'store/index'  
 
   resources :products do 
     get :who_bought, on: :member

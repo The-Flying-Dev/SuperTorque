@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
-
-  helper_method :ensure_cart_not_empty
+  before_action :authenticate_user!
+  #helper_method :ensure_cart_not_empty
 
   def authenticate_admin!
     authenticate_user!
