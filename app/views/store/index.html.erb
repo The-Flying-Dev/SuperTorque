@@ -11,7 +11,15 @@
           <%= image_tag(product.image_url, class: 'list_image') %>
           <p><%= truncate(strip_tags(product.description), length: 50) %></p>
           <p class="car_price"><%= pounds(product.price/100) %></p>
-          <p><%= button_to 'Buy Now', checkout_create_path, params: {id: product.id}, remote: true, data: {disable_with: "processing..."} %></p>
+
+          <!-- only logged in users can make purchase-->
+
+          <% if current_user %>
+            <p><%= button_to 'Buy Now', checkout_create_path, params: {id: product.id}, remote: true, data: {disable_with: "processing..."} %></p>
+          <% else %> 
+            <%= link_to 'Login in to purchase', new_user_session_path, :class => 'navbar-link' %>
+          <% end %>
+
           <!--<p class="button"><%#= button_to "Add to Garage", line_items_path(product_id: product), remote: true %></p>-->
         </div>
 

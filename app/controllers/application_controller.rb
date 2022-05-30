@@ -22,6 +22,11 @@ class ApplicationController < ActionController::Base
   
 
   private
+
+  def admin? 
+    current_user.admin?
+  end
+  
   def ensure_cart_not_empty
     if @cart.line_items.empty?
       redirect_to store_index_url, notice: 'Hey! Add some cars, your Garage is empty'
