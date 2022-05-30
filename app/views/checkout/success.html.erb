@@ -1,9 +1,16 @@
-<h1>Success</h1>
+<div class="success">
+  <h1>Success</h1>
 
-Checkout status: <%= @session_with_expand.payment_status %>
-<br>
-Amount paid: 
-<%= @session_with_expand.amount_total %>
-<p>Your Purchase will be delivered to you within the next 7 days</p>
+  <div class="content">
+    Checkout status: <%= @session_with_expand.payment_status %>
+    <br>
+    Amount paid: £
+    <%= @session_with_expand.amount_total/100 %>.00
+    <p>Your Purchase will be delivered to you within the next 7 days</p>
+
+  </div> 
+
+</div>
+
 
 

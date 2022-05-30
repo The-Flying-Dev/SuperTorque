@@ -3,15 +3,16 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   #helper_method :ensure_cart_not_empty
 
+  
+  protected 
+
   def authenticate_admin!
     authenticate_user!
-
     unless current_user.admin?
       redirect_to store_index_url, alert: "Forbidden entry"
     end
   end
 
-  protected 
 
   def configure_permitted_parameters
     added_attrs = [:email, :username, :password, :password_confirmation, :remember_me]
@@ -22,10 +23,6 @@ class ApplicationController < ActionController::Base
   
 
   private
-
-  def admin? 
-    current_user.admin?
-  end
   
   def ensure_cart_not_empty
     if @cart.line_items.empty?

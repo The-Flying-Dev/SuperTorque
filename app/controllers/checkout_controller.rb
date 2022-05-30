@@ -27,7 +27,7 @@ class CheckoutController < ApplicationController
                 },
                 maximum: {
                   unit: 'business_day',
-                  value: 7,
+                  value: 10,
                 },
               }
             }
@@ -36,7 +36,7 @@ class CheckoutController < ApplicationController
             shipping_rate_data: {
               type: 'fixed_amount',
               fixed_amount: {
-                amount: 0,
+                amount: 150000,
                 currency: 'gbp',
               },
               display_name: 'Next day air',
@@ -48,7 +48,7 @@ class CheckoutController < ApplicationController
                 },
                 maximum: {
                   unit: 'business_day',
-                  value: 3,
+                  value: 2,
                 },
               }
             }
