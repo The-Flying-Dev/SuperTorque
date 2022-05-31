@@ -23,7 +23,7 @@
           <li class="nav-item"><%= link_to 'Shop', shop_path, :class => "alt_tag" %></li>
           <li class="nav-item"><%= link_to 'About', about_path %></li>
           <li class="nav-item"><%= link_to 'Contact', contact_path, :class => "alt_tag" %></li>          
-          <li class="nav-item"><%= "Customer ID " + current_user.stripe_customer_id %></li>
+          <li class="nav-item"><%#= "Customer ID + #{current_user.stripe_customer_id}" %></li>
           <li class="nav-item"><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
           <li class="nav-item"><%= "Logged in as #{current_user.username}" %></li>
        
